@@ -41,3 +41,9 @@ function enableCam(event) {
     video.addEventListener("loadeddata", predictWebcam);
   });
 }
+
+cocoSsd.load().then(function (loadedModel) {
+  model = loadedModel;
+  // Show demo section now model is ready to use.
+  demosSection.classList.remove("invisible");
+});
